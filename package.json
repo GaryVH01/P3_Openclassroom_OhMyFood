@@ -4,9 +4,11 @@
   "description": "test pour installation de sass",
   "main": "index.js",
   "scripts": {
-
     "sass": "--watch ./OMF/style.scss:./OMF/main.css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.58.3"
+  }
 }

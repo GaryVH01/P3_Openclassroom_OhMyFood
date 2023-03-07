@@ -1,0 +1,13 @@
+.footer {
+    background-color: #353535;
+    color: white;
+        &__menu{
+            padding: 20px;
+                &__title{
+                    font-family: 'Shrikhand', cursive;
+                    color: white;
+                    padding-bottom: 10px;
+                }
+        }
+}
+
