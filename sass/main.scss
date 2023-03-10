@@ -1,12 +1,6 @@
 /*# sourceMappingURL=style.css.map */
-h2{
-    font-size: 20px;
-}
-
-h3{
-    font-size: 20px;
-}
-
-h4{
-    margin: 20px;
-}
+@import "./Utils/functions", "./Utils/maps", "./Utils/mixins", "./Utils/variables","./Utils/place-holders";
+@import "./Base/resets", "./Base/typography";
+@import "./Components/buttons", "./Components/icons";
+@import "./Layouts/footer", "./Layouts/header", "./Layouts/menus", "./Layouts/restaurants","./Layouts/functioning";
+@import "./Pages/home";

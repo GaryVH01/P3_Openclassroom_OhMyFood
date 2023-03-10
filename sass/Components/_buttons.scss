@@ -1,9 +1,9 @@
-.btn {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;    
-    color: white;
-    background: linear-gradient(150deg, #ff79da, #9356dc);
+.introducing__btn{
+    @include btn;
+    transition: transform 400ms;
+        &:hover{
+            transform: scale(1.2);
+            background-color: lighten($colour-secondary, 10)
+        }
 }
 
