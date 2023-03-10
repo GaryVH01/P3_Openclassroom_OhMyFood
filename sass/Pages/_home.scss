@@ -1,0 +1,20 @@
+.introducing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $grey-bg;
+    padding: 15px 0;
+
+    &__title {
+        font-family: "Roboto", sans-serif, "Arial";
+        font-size: x-large;
+        text-align: center;
+        margin: 10px;
+    }   
+    &__byline {
+            margin: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+}
+
