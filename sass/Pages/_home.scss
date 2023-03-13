@@ -3,18 +3,35 @@
     flex-direction: column;
     align-items: center;
     background-color: $grey-bg;
-    padding: 15px 0;
-
+    padding-bottom: 20px;
+    &__form {
+        background: #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0px 5px 5px 0px #dddddd;
+        width: 100%;
+        & input{
+            border: none;
+            background: #eaeaea;
+            font-size: 16px;
+            padding: 20px 5px 20px 5px;
+            margin-top: 5px;
+            text-align: center;
+            width: 150px;
+        }
+    }
     &__title {
         font-family: "Roboto", sans-serif, "Arial";
         font-size: x-large;
         text-align: center;
-        margin: 10px;
+        margin: 20px 20px 10px 20px;
     }   
     &__byline {
-            margin: 10px;
-            text-align: center;
-            font-weight: bold;
+        margin: 10px 20px 20px 20px;
+        text-align: center;
+        font-weight: 300;
+
         }
 }
 
