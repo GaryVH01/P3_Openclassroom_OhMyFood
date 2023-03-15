@@ -1,4 +1,58 @@
  /* Couleurs du site*/
+@keyframes translate {
+  0% {
+    transform: translate X(0);
+  }
+  20% {
+    transform: translateX(0.3);
+  }
+  40% {
+    transform: translate X(0.4);
+  }
+  60% {
+    transform: translateX(0.7);
+  }
+  80% {
+    transform: translate X(0.9);
+  }
+  100% {
+    transform: translateX(1);
+  }
+}
+@keyframes reveal {
+  0% {
+    transform: translate X(0) Y(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate X(-100px) Y(-100px);
+    opacity: 1;
+  }
+}
+.reveal--1 {
+  animation: reveal 1200ms backwards;
+}
+
+.reveal--2 {
+  animation: reveal 1200ms 300ms backwards;
+}
+
+.reveal--3 {
+  animation: reveal 1200ms 600ms backwards;
+}
+
+.reveal--4 {
+  animation: reveal 1200ms 800ms backwards;
+}
+
+.reveal--5 {
+  animation: reveal 1200ms 1000ms backwards;
+}
+
+.reveal--6 {
+  animation: reveal 1200ms 1200ms backwards;
+}
+
 * {
   text-decoration: none;
   list-style: none;
@@ -38,9 +92,10 @@ h2 {
   background: linear-gradient(150deg, #ff79da, #9356dc);
   box-shadow: 5px 5px 2px #c3c1c1;
   transition: transform 400ms;
+  opacity: 1;
 }
 .introducing__btn:hover {
-  transform: scale(1.2);
+  opacity: 0.7;
   background-color: #fface8;
 }
 
@@ -73,6 +128,31 @@ h2 {
   font-size: 1.3em;
   right: 31px;
   top: 29px;
+}
+
+.iconTitle-fill {
+  position: absolute;
+  font-size: 1.3em;
+  right: 31px;
+  top: 29px;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.iconTitle-fill:active {
+  opacity: 1;
+  transform: scale(1.1);
+  background: -webkit-linear-gradient(-150deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+  .iconTitle-fill:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    background: -webkit-linear-gradient(-150deg, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .functioning__filters__items i {
@@ -136,7 +216,7 @@ h2 {
 @media screen and (min-width: 769px) and (max-width: 1400px) {
   .menu {
     flex-direction: row;
-    flex: 1 0 30%;
+    flex-wrap: wrap;
   }
 }
 .menu__title {
@@ -146,12 +226,25 @@ h2 {
   margin-top: 20px;
   position: absolute;
 }
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+  .menu__title {
+    left: 40%;
+  }
+}
 .menu__entrance {
   margin: 20px 0 20px 0;
-  flex: 1 0 30%;
+  flex: 1 0 25%;
 }
 .menu__entrance h2 {
-  font-weight: 300;
+  position: relative;
+}
+.menu__entrance h2::after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  bottom: -3px;
+  left: 0%;
+  border-bottom: 3px solid #99E2D0;
 }
 @media screen and (min-width: 769px) and (max-width: 1400px) {
   .menu__entrance {
@@ -167,13 +260,33 @@ h2 {
   flex-direction: column;
   padding: 12px;
   position: relative;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__entrance__items__choice {
+  font-weight: 400;
+  margin: 3px;
+}
+.menu__entrance__items__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .menu__main-course {
   margin: 20px 0 20px 0;
-  flex: 1 0 30%;
+  flex: 1 0 25%;
 }
 .menu__main-course h2 {
-  font-weight: 300;
+  position: relative;
+}
+.menu__main-course h2::after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  bottom: -3px;
+  left: 0%;
+  border-bottom: 3px solid #99E2D0;
 }
 @media screen and (min-width: 769px) and (max-width: 1400px) {
   .menu__main-course {
@@ -189,13 +302,33 @@ h2 {
   flex-direction: column;
   padding: 12px;
   position: relative;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__main-course__items__choice {
+  font-weight: 400;
+  margin: 3px;
+}
+.menu__main-course__items__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .menu__desserts {
   margin: 20px 0 20px 0;
-  flex: 1 0 30%;
+  flex: 1 0 25%;
 }
 .menu__desserts h2 {
-  font-weight: 300;
+  position: relative;
+}
+.menu__desserts h2::after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  bottom: -3px;
+  left: 0%;
+  border-bottom: 3px solid #99E2D0;
 }
 @media screen and (min-width: 769px) and (max-width: 1400px) {
   .menu__desserts {
@@ -211,22 +344,29 @@ h2 {
   flex-direction: column;
   padding: 12px;
   position: relative;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-
-.price {
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
-}
-
-.plate {
+.menu__desserts__items__choice {
   font-weight: 400;
   margin: 3px;
+}
+.menu__desserts__items__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .about {
   font-weight: 300;
   margin: 3px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.price {
+  padding-left: 5px;
 }
 
 .order {

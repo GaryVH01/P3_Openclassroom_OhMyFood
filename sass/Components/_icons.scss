@@ -12,6 +12,24 @@
     top: 29px;
 }
 
+.iconTitle-fill{
+    position: absolute;
+    font-size: 1.3em;
+    right: 31px;
+    top: 29px;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    &:active{
+        @include fill-icon;
+    }
+    @include desktop{
+        &:hover{
+            @include fill-icon;
+        }
+    }
+}
+
+
 .functioning__filters__items i{
     color: #7e7e7e;
 }

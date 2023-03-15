@@ -21,12 +21,12 @@ transform: translateX(1);
 
 @keyframes reveal{
     0% {
-        transform: translate X(0);
+        transform: translate X(0) Y(0);
         opacity: 0;
     }
     
     100% {
-        transform: translateX(1);
+        transform: translate X(-100px) Y(-100px);
         opacity: 1;
     }
 }

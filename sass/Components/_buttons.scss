@@ -1,8 +1,9 @@
 .introducing__btn{
     @include btn;
     transition: transform 400ms;
+    opacity: 1;
         &:hover{
-            transform: scale(1.2);
+            opacity: 0.7;
             background-color: lighten($colour-secondary, 10)
         }
 }

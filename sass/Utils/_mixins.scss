@@ -31,3 +31,10 @@
 }
 
 
+@mixin fill-icon{
+    opacity: 1;
+    transform: scale(1.1);
+    background: -webkit-linear-gradient(-150deg, $colour-primacy, $colour-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
