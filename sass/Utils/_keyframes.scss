@@ -1,0 +1,32 @@
+@keyframes translate{
+    0% {
+        transform: translate X(0);
+    }
+    20% {
+transform: translateX(0.3);
+    }
+    40% {
+        transform: translate X(0.4);
+    }
+    60% {
+transform: translateX(0.7);
+    }
+    80% {
+        transform: translate X(0.9);
+    }
+    100% {
+transform: translateX(1);
+    }
+}
+
+@keyframes reveal{
+    0% {
+        transform: translate X(0);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateX(1);
+        opacity: 1;
+    }
+}
