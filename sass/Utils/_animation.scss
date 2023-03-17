@@ -16,3 +16,18 @@
 .reveal--6 {
     animation: reveal 1200ms 1200ms backwards;
 }
+
+
+.menu__entrance__items:hover::after,
+.menu__main-course__items:hover::after,
+.menu__desserts__items:hover::after{
+    animation: box-translate 800ms 0s 1 forwards;
+} 
+
+.menu__entrance__items:hover + .iconCheck,
+.menu__main-course__items:hover + .iconCheck,
+.menu__desserts__items:hover + .iconCheck{
+    animation: check 1000ms 0s 1 forwards;
+}
+
+

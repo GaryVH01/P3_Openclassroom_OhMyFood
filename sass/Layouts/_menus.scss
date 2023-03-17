@@ -52,7 +52,17 @@
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-
+            &::after{
+                content: "";
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                background-color: $colour-tercary;
+                right:-80px;
+                top: 0px;
+                //display: none;
+            }
+          
             &__choice {
                 font-weight: 400;
                 margin: 3px;
@@ -92,6 +102,17 @@
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
+
+            &::after{
+                content: "";
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                background-color: $colour-tercary;
+                right:-80px;
+                top: 0px;
+             //   display: none;
+            }
 
             &__choice {
                 font-weight: 400;
@@ -133,6 +154,16 @@
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                background-color: $colour-tercary;
+                right:-80px;
+                top: 0px;
+            }
+           
 
             &__choice {
                 font-weight: 400;
