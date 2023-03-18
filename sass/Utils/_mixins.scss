@@ -14,8 +14,6 @@
     border-radius: 20px;
     box-shadow: 1px 1px 5px $colour-shadow;
     display: flex;
-    flex-direction: column;
-    padding: 12px;
 }
 
 @mixin tablet{

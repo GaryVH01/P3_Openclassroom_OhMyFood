@@ -1,31 +1,12 @@
 @keyframes reveal{
     0% {
-        transform: translate X(0) Y(0);
         opacity: 0;
     }
     
     100% {
-        transform: translate X(-100px) Y(-100px);
         opacity: 1;
     }
 }
 
-@keyframes box-translate{
-	0% {
-		transform: translateX(Opx);
 
-	}
 
-	100% {
-		transform: translateX(-80px);
-	}
-}
-
-@keyframes check {
-    0% {
-        transform: rotate(0);
-    }
-    100%{
-        transform: rotate(1 turn);
-    }
-}
