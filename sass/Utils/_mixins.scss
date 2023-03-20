@@ -1,12 +1,22 @@
+// Ensemble de règles qui s'appliqueront lorsqu'elles seront appelées dans les différents sélecteurs de style. 
+
 @mixin btn{
     margin: 10px;
     padding: 10px;
     border-radius: 30px;
     border: none;    
     color: white;
+    font-size: 16px;
     background: linear-gradient(150deg, #ff79da, #9356dc);
-    box-shadow: 5px 5px 2px $colour-shadow;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
+    &:hover{
+        transition-duration: 500ms;
+        filter: brightness(110%);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+    }
 }
+    
 
 @mixin items{
     background-color: white;

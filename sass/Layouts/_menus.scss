@@ -4,13 +4,13 @@
     margin-top: -36px;
     border-radius: 30px 30px 0 0;
     background-color: white;
-    position: relative;
-    margin-top: -80px;
-    padding: 70px 20px 10px 20px;
+    position: relative; // Cela permet de placer l'icône coeur là où on le souhaite.
+    margin-top: -80px; //Margin négatif important pour obtenir un effet de superposition des éléments.
+    padding: 70px 20px 10px 20px; 
     background-color: $grey-bg;
 
     @include desktop {
-        flex-direction: row;
+        flex-direction: row; // En version desktop, j'ai décidé que les restaurants devraient s'afficher les uns à côté des autres.
         flex-wrap: wrap;
     }
 
@@ -21,11 +21,11 @@
         margin-top: 20px;
         position: absolute;
 
-        @include desktop {
+        @include desktop { // Titre centré en desktop
             left: 40%;
         }
     }
-
+   
     &__entrance {
         margin: 20px 0 20px 0;
         flex: 1 0 25%;
@@ -47,6 +47,7 @@
             margin: 20px;
         }
 
+        // Mise en forme de la section ENTREES. 
         &__items {
             @include items;
             display: flex;
@@ -57,42 +58,45 @@
 
 
             &__description {
+                display: flex;
+                flex-direction: column;
                 padding: 10px;
                 line-height: 1.5em;
-                overflow: hidden;
-                justify-content: space-between;
                 text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                justify-content: space-between;
+                
 
                 & h3 {
-                    font-weight: 400;
+                    font-weight: 500;
                     text-overflow: ellipsis;
+                    overflow: hidden;
                     white-space: nowrap;
                     display: block;
-                    overflow: hidden;
+                    font-size: 17px;
                 }
 
                 & p {
                     text-overflow: ellipsis;
+                    overflow: hidden;
                     white-space: nowrap;
                     display: block;
-                    overflow: hidden;
+                    font-size: 15px;
                 }
             }
 
             &__slider {
                 display: flex;
                 margin-right: -80px;
-                margin-left: 60px;
                 flex-wrap: nowrap;
-                z-index: 0;
                 transition: transform 500ms ease-out;
+                z-index: 0;
 
                 &__checkbox {
                     width: 70px;
                     height: 70px;
                     background-color: $colour-tercary;
-                    right: -70px;
-                    top: 0px;
                     transition: transform 500ms ease-in-out;
                     justify-content: center;
                     display: flex;
@@ -110,13 +114,17 @@
                 &__price {
                     align-self: flex-end;
                     display: flex;
-                    padding: 15px 20px;
+                    padding: 15px 20px 15px 0;
+                    font-size: 15px;
                 }
             }
 
         }
     }
 
+    //Mise en forme répétée de la section ENTREES.
+    //Possibilité de ne pas répéter le code mais cela nécessite de remanier le fichier HTML et donc de casser le code. 
+    //Il aurait fallu anticiper d'avantage.
     &__main-course {
         margin: 20px 0 20px 0;
         flex: 1 0 25%;
@@ -148,44 +156,45 @@
 
 
             &__description {
+                display: flex;
+                flex-direction: column;
                 padding: 10px;
                 line-height: 1.5em;
-                overflow: hidden;
-                justify-content: space-between;
                 text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                justify-content: space-between;
+                
 
                 & h3 {
-                    font-weight: 400;
+                    font-weight: 500;
                     text-overflow: ellipsis;
+                    overflow: hidden;
                     white-space: nowrap;
                     display: block;
-                    overflow: hidden;
+                    font-size: 17px;
                 }
 
                 & p {
                     text-overflow: ellipsis;
+                    overflow: hidden;
                     white-space: nowrap;
                     display: block;
-                    overflow: hidden;
+                    font-size: 15px;
                 }
             }
-
-
 
             &__slider {
                 display: flex;
                 margin-right: -80px;
-                margin-left: 60px;
                 flex-wrap: nowrap;
-                z-index: 0;
                 transition: transform 500ms ease-out;
+                z-index: 0;
 
                 &__checkbox {
                     width: 70px;
                     height: 70px;
                     background-color: $colour-tercary;
-                    right: -70px;
-                    top: 0px;
                     transition: transform 500ms ease-in-out;
                     justify-content: center;
                     display: flex;
@@ -203,13 +212,16 @@
                 &__price {
                     align-self: flex-end;
                     display: flex;
-                    padding: 15px 20px;
+                    padding: 15px 20px 15px 0;
+                    font-size: 15px;
                 }
             }
         }
 
     }
-
+    //Mise en forme répétée de la section ENTREES.
+    //Possibilité de ne pas répéter le code mais cela nécessite de remanier le fichier HTML et donc de casser le code. 
+    //Il aurait fallu anticiper d'avantage.
     &__desserts {
         margin: 20px 0 20px 0;
         flex: 1 0 25%;
@@ -241,42 +253,45 @@
 
 
             &__description {
+                display: flex;
+                flex-direction: column;
                 padding: 10px;
                 line-height: 1.5em;
-                overflow: hidden;
-                justify-content: space-between;
                 text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                justify-content: space-between;
+                
 
                 & h3 {
-                    font-weight: 400;
+                    font-weight: 500;
                     text-overflow: ellipsis;
+                    overflow: hidden;
                     white-space: nowrap;
                     display: block;
-                    overflow: hidden;
+                    font-size: 17px;
                 }
 
                 & p {
                     text-overflow: ellipsis;
+                    overflow: hidden;
                     white-space: nowrap;
                     display: block;
-                    overflow: hidden;
+                    font-size: 15px;
                 }
             }
 
             &__slider {
                 display: flex;
                 margin-right: -80px;
-                margin-left: 60px;
                 flex-wrap: nowrap;
-                z-index: 0;
                 transition: transform 500ms ease-out;
+                z-index: 0;
 
                 &__checkbox {
                     width: 70px;
                     height: 70px;
                     background-color: $colour-tercary;
-                    right: -70px;
-                    top: 0px;
                     transition: transform 500ms ease-in-out;
                     justify-content: center;
                     display: flex;
@@ -294,9 +309,11 @@
                 &__price {
                     align-self: flex-end;
                     display: flex;
-                    padding: 15px 20px;
+                    padding: 15px 20px 15px 0;
+                    font-size: 15px;
                 }
             }
         }
     }
 }
+

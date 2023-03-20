@@ -7,6 +7,7 @@
         margin: 20px 0 0 20px;
     }
 
+    //Mise en forme du menu filtres
     &__filters {
         flex-wrap: wrap;
         @include desktop {
@@ -19,7 +20,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-
+        //Mise en forme des filtres
         &__items {
             display: flex;
             flex-direction: row;
@@ -33,6 +34,7 @@
             align-items: center;
             font-size: 14px;
             font-weight: bold;
+            white-space: nowrap;
             &:hover{
                 background-color: $colour-hover;
                 cursor: pointer;

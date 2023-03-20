@@ -1,3 +1,6 @@
+//Style des différentes icônes
+
+// icônes coeur sur des pages différentes en position absolute
 .iconInfo{
     position: absolute;
     font-size: 1.4em;
@@ -12,28 +15,13 @@
     top: 29px;
 }
 
-.iconTitle-fill{
-    position: absolute;
-    font-size: 1.3em;
-    right: 31px;
-    top: 29px;
-    opacity: 0;
-    transition: all 300ms ease-in-out;
-    &:active{
-        @include fill-icon;
-    }
-    @include desktop{
-        &:hover{
-            @include fill-icon;
-        }
-    }
-}
 
-
+// icône des filtres de la page d'accueil
 .functioning__filters__items i{
     color: #7e7e7e;
 }
 
+// icône de la checbox 
 .iconCheck{
     position: absolute;
     right: 25px;

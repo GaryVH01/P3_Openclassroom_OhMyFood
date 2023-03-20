@@ -1,3 +1,23 @@
+// Animations
+//Coeur qui se remplit lors du hover ou du clic.
+.iconTitle-fill{
+    position: absolute;
+    font-size: 1.3em;
+    right: 31px;
+    top: 29px;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    &:active{
+        @include fill-icon;
+    }
+    @include desktop{
+        &:hover{
+            @include fill-icon;
+        }
+    }
+}
+
+// Apparition des items menu une par une sur une durée de 2s. 
 .reveal--1 {
     animation: reveal 2000ms backwards;
 }
@@ -38,6 +58,7 @@
     animation: reveal 2000ms 1900ms backwards;
 }
 
+// Animation de la checkbox au fond vert avec une translation et une rotation. 
 .menu__entrance__items:active > .menu__entrance__items__slider,
 .menu__main-course__items:active > .menu__main-course__items__slider,
 .menu__desserts__items:active > .menu__desserts__items__slider{
@@ -50,6 +71,7 @@
     transform: rotate(2turn);
 }
 
+// mise en forme de la checkbox
 .menu__entrance__items__slider__checkbox,
 .menu__main-course__items__slider__checkbox,
 .menu__desserts__items__slider__checkbox {
@@ -73,6 +95,7 @@
 }
 
 
+// Breakpoints pour la version desktop.
 @media screen and (min-width: 769px) and (max-width:1400px){
     .menu__entrance__items:hover > .menu__entrance__items__slider,
     .menu__main-course__items:hover > .menu__main-course__items__slider,

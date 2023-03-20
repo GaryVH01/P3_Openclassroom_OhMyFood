@@ -1,17 +1,18 @@
+// Section de présentation du site
 .introducing {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $grey-bg;
     padding-bottom: 20px;
-    &__form {
+    &__form { //Formulaire de localisation stylisé pour donner l'impression qu'il occupe la largeur totale de la page. 
         background: #eaeaea;
         display: flex;
         justify-content: center;
         align-items: center;
         box-shadow: inset 0px 5px 5px 0px #dddddd;
         width: 100%;
-        & input{
+        & input{ 
             border: none;
             background: #eaeaea;
             font-size: 16px;
@@ -31,7 +32,6 @@
         margin: 10px 20px 20px 20px;
         text-align: center;
         font-weight: 300;
-
         }
 }
 

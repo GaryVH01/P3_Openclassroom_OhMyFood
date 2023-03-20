@@ -1,29 +1,16 @@
+// Page contenant les différents boutons de la page d'accueil et des menus
+
+// Bouton "explorer nos restaurants" lié à une mixin btn
 .introducing__btn{
     @include btn;
-    transition: transform 400ms;
-    opacity: 1;
-        &:hover{
-            opacity: 0.7;
-            background-color: lighten($colour-secondary, 10)
-        }
 }
 
-.order {
-    display: flex;
-    background-color: $grey-bg;
-    margin-top: -30px;
-}
-
+// Bouton "Commander"
 .order__btn{
     @include btn;
     padding: 15px 50px;
     margin: 30px auto 30px auto;
-    color: white;
-    font-size: 15px;
     & a{
         color: white;
-    }
-    &:hover{
-        opacity: 0.7;
     }
 }
