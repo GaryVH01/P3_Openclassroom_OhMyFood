@@ -1,0 +1,13 @@
+// Image principale de la page menus
+.image{
+    height:350px;
+    object-fit: cover;
+    width: 100%;
+}
+
+// Mise en forme de la section bouton de la page menu. Animation dans le fichier animations.scss
+.order {
+    display: flex;
+    background-color: $grey-bg; // Background pour créer une continuité du menu.
+    margin-top: -30px;
+}
