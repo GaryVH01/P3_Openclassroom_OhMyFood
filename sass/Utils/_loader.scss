@@ -1,211 +1,198 @@
-.container {
+.loader {
   display: flex;
   justify-content: center;
-}
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(120deg, $colour-tercary, white);
+  z-index: 1;
+  animation: done 3000ms 800ms forwards; // durée totale du loader
 
-.center {
-  & p{
-    font-family:"shrikhand", sans-serif, "Arial";
-  }
-}
 
-.load {
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 30vh;
-  height: 22.5vh;
-  display: flex;
-  justify-content: space-evenly;
+  &__bars {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30vh;
+    height: 18vh;
+    display: flex;
+    justify-content: space-evenly;
 
-  &__bar1 {
-    background-color: #15DEA5;
-    height: 100%;
-    width: 3vh;
-    animation: bar1 2000ms 100ms backwards infinite ease-in-out alternate;
-  }
+    &__1 {
+      background-color: #15DEA5;
+      border-radius: 15px;
+      height: 100%;
+      width: 3vh;
+      background-color: $colour-secondary;
+      animation: bar1 2000ms 100ms backwards infinite ease-in-out alternate; // durée de l'animation de chaque barre
+    }
 
-  &__bar2 {
-    background-color: #15DEA5;
-    height: 100%;
-    width: 3vh;
-    animation: bar2 2000ms 300ms backwards infinite ease-in-out alternate;
-  }
+    &__2 {
+      background-color: #15DEA5;
+      border-radius: 15px;
 
-  &__bar3 {
-    background-color: #15DEA5;
-    height: 100%;
-    width: 3vh;
-    animation: bar3 2000ms 500ms backwards infinite ease-in-out alternate;
-  }
+      height: 100%;
+      width: 3vh;
+      background-color: $colour-tercary;
+      animation: bar2 2000ms 300ms backwards infinite ease-in-out alternate;
+    }
 
-  &_bar4 {
-    background-color: #15DEA5;
-    height: 100%;
-    width: 3vh;
-    animation: bar4 2000ms 700ms backwards infinite ease-in-out alternate;
-  }
+    &__3 {
+      background-color: #15DEA5;
+      border-radius: 15px;
 
-  &_bar5 {
-    background-color: #15DEA5;
-    height: 100%;
-    width: 3vh;
-    animation: bar5 2000ms 900ms backwards infinite ease-in-out alternate;
-  }
+      height: 100%;
+      width: 3vh;
+      background-color: $colour-secondary;
+      animation: bar3 2000ms 500ms backwards infinite ease-in-out alternate;
+    }
 
-  &__bar1--inv {
-    background-color: #15DEA5;
-    height: 100%;
-    width: 3vh;
-    animation: bar1--inv 2000ms 1100ms backwards infinite ease-in-out alternate;
-  }
+    &__4 {
+      background-color: #15DEA5;
+      border-radius: 15px;
 
-  &__bar2--inv {
-    background-color: #15DEA5;
-    height: 100%;
-    width: 3vh;
-    animation: bar2--inv 2000ms 1300ms backwards infinite ease-in-out alternate
-  }
+      height: 100%;
+      width: 3vh;
+      background-color: $colour-tercary;
+      animation: bar4 2000ms 700ms backwards infinite ease-in-out alternate;
+    }
 
-  &__bar3--inv {
-    background-color: #15DEA5;
-    height: 100%;
-    width: 3vh;
-    animation: bar3--inv 2000ms 1400ms backwards infinite ease-in-out alternate;
+    &__5 {
+      background-color: #15DEA5;
+      border-radius: 15px;
+
+      height: 100%;
+      width: 3vh;
+      background-color: $colour-secondary;
+
+      animation: bar5 2000ms 900ms backwards infinite ease-in-out alternate;
+    }
   }
 
-  &__bar4--inv {
-    background-color: #15DEA5;
-    height: 100%;
-    width: 3vh;
-    animation: bar4--inv 2000ms 1600ms backwards infinite ease-in-out alternate;
-  }
+  &__logo {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 30px;
+    color: $colour-primacy;
+    flex-direction: column;
 
-  &__bar5--inv {
-    background-color: #15DEA5;
-    height: 100%;
-    width: 3vh;
-    animation: bar5--inv 2000ms 1800ms backwards infinite ease-in-out alternate;
+    & p {
+      font-family: "shrikhand", sans-serif, "Arial";
+    }
+
+    &__underline {
+      display: flex;
+      gap: 5px;
+
+      &__1 {
+        background-color: $colour-primacy;
+        width: 3px;
+        height: 3px;
+        border-radius: 50px;
+        animation: underline 2000ms backwards infinite  alternate;
+      }
+
+      &__2 {
+        background-color: $colour-secondary;
+        width: 3px;
+        height: 3px;
+        border-radius: 50px;
+        animation: underline 2000ms backwards infinite  alternate;
+      }
+
+      &__3 {
+        background-color: $colour-tercary;
+        width: 3px;
+        height: 3px;
+        border-radius: 50px;
+        animation: underline 2000ms backwards infinite alternate;
+      }
+    }
   }
 }
 
 @keyframes bar1 {
   0% {
     transform: scaleX(0.1) scaleY(0.1);
-    opacity: 1;
+    opacity: 0;
   }
 
   100% {
     transform: scaleX(1) scaleY(0.1);
-    opacity: 0;
+    opacity: 1;
   }
 }
 
 @keyframes bar2 {
   0% {
     transform: scaleY(0.1);
-    opacity: 1;
+    opacity: 0.1;
   }
 
   100% {
     transform: scaleY(0.2);
-    opacity: 0;
+    opacity: 1;
   }
 }
 
 @keyframes bar3 {
   0% {
     transform: scaleY(0.1);
-    opacity: 1;
+    opacity: 0.1;
   }
 
   100% {
     transform: scaleY(0.4);
-    opacity: 0;
+    opacity: 1;
   }
 }
 
 @keyframes bar4 {
   0% {
     transform: scaleY(0.1);
-    opacity: 1;
+    opacity: 0.1;
   }
 
   100% {
     transform: scaleY(0.6);
-    opacity: 0;
+    opacity: 1;
   }
 }
 
 @keyframes bar5 {
   0% {
     transform: scaleY(0.1);
-    opacity: 1;
+    opacity: 0.1;
   }
 
   100% {
     transform: scaleY(1);
-    opacity: 0;
+    opacity: 1;
   }
 }
 
-@keyframes bar1--inv {
+@keyframes underline {
   0% {
-    transform: scaleY(0.1);
-    opacity: 1;
+    transform: translateX(0px);
   }
 
   100% {
-    transform: scaleY(1);
-    opacity: 0;
+    transform: translateX(150px);
   }
 }
 
-@keyframes bar2--inv {
-  0% {
-    transform: scaleY(0.1);
+@keyframes done {
+  0% , 99% {
     opacity: 1;
   }
-
   100% {
-    transform: scaleY(0.6);
     opacity: 0;
   }
 }
 
-@keyframes bar3--inv {
-  0% {
-    transform: scaleY(0.1);
-    opacity: 1;
-  }
 
-  100% {
-    transform: scaleY(0.4);
-    opacity: 0;
-  }
-}
-
-@keyframes bar4--inv {
-  0% {
-    transform: scaleY(0.1);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scaleY(0.2);
-    opacity: 0;
-  }
-}
-
-@keyframes bar5--inv {
-  0% {
-    transform: scaleX(1) scaleY(0.1);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scaleX(0.1) scaleY(0.1);
-    opacity: 0;
-  }
-}
 
 /*# sourceMappingURL=loader.css.map */

@@ -1,7 +1,7 @@
 /*# sourceMappingURL=style.css.map */
 //Fichier principal sass permettant de regrouper l'ensemble des fichiers scss au même endroit avant de compiler le tout en css. 
 
-@import "./Utils/functions", "./Utils/maps", "./Utils/mixins", "./Utils/variables","./Utils/place-holders","./Utils/keyframes","./Utils/animation";
+@import "./Utils/functions", "./Utils/maps", "./Utils/mixins", "./Utils/variables","./Utils/place-holders","./Utils/keyframes","./Utils/animation","./Utils/loader";
 @import "./Base/resets", "./Base/typography";
 @import "./Components/buttons", "./Components/icons";
 @import "./Layouts/footer", "./Layouts/header", "./Layouts/menus", "./Layouts/restaurants","./Layouts/functioning";

@@ -51,7 +51,6 @@
         &__items {
             @include items;
             display: flex;
-            position: relative;
             justify-content: space-between;
             overflow: hidden;
             align-items: center;
@@ -149,7 +148,6 @@
         &__items {
             @include items;
             display: flex;
-            position: relative;
             justify-content: space-between;
             overflow: hidden;
             align-items: center;
@@ -246,7 +244,6 @@
         &__items {
             @include items;
             display: flex;
-            position: relative;
             justify-content: space-between;
             overflow: hidden;
             align-items: center;
