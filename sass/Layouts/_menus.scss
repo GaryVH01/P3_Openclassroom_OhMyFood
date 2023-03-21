@@ -26,7 +26,7 @@
         }
     }
    
-    &__entrance {
+    &__plate {
         margin: 20px 0 20px 0;
         flex: 1 0 25%;
 
@@ -47,7 +47,7 @@
             margin: 20px;
         }
 
-        // Mise en forme de la section ENTREES. 
+        // Mise en forme de la section entrées/plats/desserts. 
         &__items {
             @include items;
             display: flex;
@@ -118,199 +118,6 @@
                 }
             }
 
-        }
-    }
-
-    //Mise en forme répétée de la section ENTREES.
-    //Possibilité de ne pas répéter le code mais cela nécessite de remanier le fichier HTML et donc de casser le code. 
-    //Il aurait fallu anticiper d'avantage.
-    &__main-course {
-        margin: 20px 0 20px 0;
-        flex: 1 0 25%;
-
-        & h2 {
-            position: relative;
-        }
-
-        & h2::after {
-            content: "";
-            position: absolute;
-            width: 15%;
-            bottom: -3px;
-            left: 0%;
-            border-bottom: 3px solid $colour-tercary;
-        }
-
-        @include desktop {
-            margin: 20px;
-        }
-
-        &__items {
-            @include items;
-            display: flex;
-            justify-content: space-between;
-            overflow: hidden;
-            align-items: center;
-
-
-            &__description {
-                display: flex;
-                flex-direction: column;
-                padding: 10px;
-                line-height: 1.5em;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-                justify-content: space-between;
-                
-
-                & h3 {
-                    font-weight: 500;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    display: block;
-                    font-size: 17px;
-                }
-
-                & p {
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    display: block;
-                    font-size: 15px;
-                }
-            }
-
-            &__slider {
-                display: flex;
-                margin-right: -80px;
-                flex-wrap: nowrap;
-                transition: transform 500ms ease-out;
-                z-index: 0;
-
-                &__checkbox {
-                    width: 70px;
-                    height: 70px;
-                    background-color: $colour-tercary;
-                    transition: transform 500ms ease-in-out;
-                    justify-content: center;
-                    display: flex;
-                    align-items: center;
-                    border-radius: 0 20px 20px 0;
-                    & i{
-                        right: 22px;
-                        top: 22px;
-                        color: white;
-                        font-size: 35px;
-                        transition: transform 500ms ease-out;
-                        }
-                }
-
-                &__price {
-                    align-self: flex-end;
-                    display: flex;
-                    padding: 15px 20px 15px 0;
-                    font-size: 15px;
-                }
-            }
-        }
-
-    }
-    //Mise en forme répétée de la section ENTREES.
-    //Possibilité de ne pas répéter le code mais cela nécessite de remanier le fichier HTML et donc de casser le code. 
-    //Il aurait fallu anticiper d'avantage.
-    &__desserts {
-        margin: 20px 0 20px 0;
-        flex: 1 0 25%;
-
-        & h2 {
-            position: relative;
-        }
-
-        & h2::after {
-            content: "";
-            position: absolute;
-            width: 15%;
-            bottom: -3px;
-            left: 0%;
-            border-bottom: 3px solid $colour-tercary;
-        }
-
-        @include desktop {
-            margin: 20px;
-        }
-
-        &__items {
-            @include items;
-            display: flex;
-            justify-content: space-between;
-            overflow: hidden;
-            align-items: center;
-
-
-            &__description {
-                display: flex;
-                flex-direction: column;
-                padding: 10px;
-                line-height: 1.5em;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-                justify-content: space-between;
-                
-
-                & h3 {
-                    font-weight: 500;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    display: block;
-                    font-size: 17px;
-                }
-
-                & p {
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    display: block;
-                    font-size: 15px;
-                }
-            }
-
-            &__slider {
-                display: flex;
-                margin-right: -80px;
-                flex-wrap: nowrap;
-                transition: transform 500ms ease-out;
-                z-index: 0;
-
-                &__checkbox {
-                    width: 70px;
-                    height: 70px;
-                    background-color: $colour-tercary;
-                    transition: transform 500ms ease-in-out;
-                    justify-content: center;
-                    display: flex;
-                    align-items: center;
-                    border-radius: 0 20px 20px 0;
-                    & i{
-                        right: 22px;
-                        top: 22px;
-                        color: white;
-                        font-size: 35px;
-                        transition: transform 500ms ease-out;
-                        }
-                }
-
-                &__price {
-                    align-self: flex-end;
-                    display: flex;
-                    padding: 15px 20px 15px 0;
-                    font-size: 15px;
-                }
-            }
         }
     }
 }
-

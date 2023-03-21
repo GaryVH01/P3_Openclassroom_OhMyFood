@@ -59,22 +59,16 @@
 }
 
 // Animation de la checkbox au fond vert avec une translation et une rotation. 
-.menu__entrance__items:active > .menu__entrance__items__slider,
-.menu__main-course__items:active > .menu__main-course__items__slider,
-.menu__desserts__items:active > .menu__desserts__items__slider{
+.menu__plate__items:active > .menu__plate__items__slider{
     transform: translateX(-80px);
 }
 
-.menu__entrance__items:active > .menu__entrance__items__slider i,
-.menu__main-course__items:active > .menu__main-course__items__slider i,
-.menu__desserts__items:active> .menu__desserts__items__slider i{
+.menu__plate__items:active > .menu__plate__items__slider i{
     transform: rotate(2turn);
 }
 
 // mise en forme de la checkbox
-.menu__entrance__items__slider__checkbox,
-.menu__main-course__items__slider__checkbox,
-.menu__desserts__items__slider__checkbox {
+.menu__plate__items__slider__checkbox {
     width: 80px;
     height: 80px;
     background-color: $colour-tercary;
@@ -97,25 +91,21 @@
 
 // Breakpoints pour la version desktop.
 @media screen and (min-width: 769px) and (max-width:1400px){
-    .menu__entrance__items:hover > .menu__entrance__items__slider,
-    .menu__main-course__items:hover > .menu__main-course__items__slider,
-    .menu__desserts__items:hover > .menu__desserts__items__slider{
+    .menu__plate__items:hover > .menu__plate__items__slider{
         transform: translateX(-80px);
     }
-    .menu__entrance__items:hover > .menu__entrance__items__slider  i,
-    .menu__main-course__items:hover > .menu__main-course__items__slider i,
-    .menu__desserts__items:hover > .menu__desserts__items__slider i{
+    .menu__plate__items:hover > .menu__plate__items__slider  i{
     transform: rotate(2turn);
-}
+    }
 
-.reveal--entrance {
+    .reveal--entrance {
     animation: reveal 1500ms backwards;
-}
-.reveal-_main-course {
+    }
+    .reveal--main-course {
     animation: reveal 1500ms 500ms backwards;
-}
-.reveal--desserts {
+    }
+    .reveal--desserts {
     animation: reveal 1500ms 1000ms backwards;
-}
+    }
 }
 
