@@ -1,0 +1,211 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  & p{
+    font-family:"shrikhand", sans-serif, "Arial";
+  }
+}
+
+.load {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+
+  &__bar1 {
+    background-color: #15DEA5;
+    height: 100%;
+    width: 3vh;
+    animation: bar1 2000ms 100ms backwards infinite ease-in-out alternate;
+  }
+
+  &__bar2 {
+    background-color: #15DEA5;
+    height: 100%;
+    width: 3vh;
+    animation: bar2 2000ms 300ms backwards infinite ease-in-out alternate;
+  }
+
+  &__bar3 {
+    background-color: #15DEA5;
+    height: 100%;
+    width: 3vh;
+    animation: bar3 2000ms 500ms backwards infinite ease-in-out alternate;
+  }
+
+  &_bar4 {
+    background-color: #15DEA5;
+    height: 100%;
+    width: 3vh;
+    animation: bar4 2000ms 700ms backwards infinite ease-in-out alternate;
+  }
+
+  &_bar5 {
+    background-color: #15DEA5;
+    height: 100%;
+    width: 3vh;
+    animation: bar5 2000ms 900ms backwards infinite ease-in-out alternate;
+  }
+
+  &__bar1--inv {
+    background-color: #15DEA5;
+    height: 100%;
+    width: 3vh;
+    animation: bar1--inv 2000ms 1100ms backwards infinite ease-in-out alternate;
+  }
+
+  &__bar2--inv {
+    background-color: #15DEA5;
+    height: 100%;
+    width: 3vh;
+    animation: bar2--inv 2000ms 1300ms backwards infinite ease-in-out alternate
+  }
+
+  &__bar3--inv {
+    background-color: #15DEA5;
+    height: 100%;
+    width: 3vh;
+    animation: bar3--inv 2000ms 1400ms backwards infinite ease-in-out alternate;
+  }
+
+  &__bar4--inv {
+    background-color: #15DEA5;
+    height: 100%;
+    width: 3vh;
+    animation: bar4--inv 2000ms 1600ms backwards infinite ease-in-out alternate;
+  }
+
+  &__bar5--inv {
+    background-color: #15DEA5;
+    height: 100%;
+    width: 3vh;
+    animation: bar5--inv 2000ms 1800ms backwards infinite ease-in-out alternate;
+  }
+}
+
+@keyframes bar1 {
+  0% {
+    transform: scaleX(0.1) scaleY(0.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleX(1) scaleY(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes bar2 {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(0.2);
+    opacity: 0;
+  }
+}
+
+@keyframes bar3 {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0;
+  }
+}
+
+@keyframes bar4 {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes bar5 {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 0;
+  }
+}
+
+@keyframes bar1--inv {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 0;
+  }
+}
+
+@keyframes bar2--inv {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes bar3--inv {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0;
+  }
+}
+
+@keyframes bar4--inv {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(0.2);
+    opacity: 0;
+  }
+}
+
+@keyframes bar5--inv {
+  0% {
+    transform: scaleX(1) scaleY(0.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleX(0.1) scaleY(0.1);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=loader.css.map */
