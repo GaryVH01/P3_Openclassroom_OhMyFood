@@ -25,6 +25,7 @@
             margin: 20px;
             flex: 1 0 50%;
             position: relative;
+            @include shadow;
 
             @include tablet {
                 flex: 1 0 30%;

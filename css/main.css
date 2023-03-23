@@ -138,9 +138,10 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(120deg, #99E2D0, white);
+  background-color: white;
   z-index: 1;
-  animation: done 3000ms 800ms forwards;
+  transition: visibility 0.75s, opacity 0.75s;
+  animation: done 3500ms forwards;
 }
 .loader__bars {
   margin-top: auto;
@@ -156,7 +157,7 @@
   height: 100%;
   width: 3vh;
   background-color: #FF79DA;
-  animation: bar1 2000ms 100ms backwards infinite ease-in-out alternate;
+  animation: bar1 1000ms 100ms backwards infinite ease-in-out alternate;
 }
 .loader__bars__2 {
   background-color: #15DEA5;
@@ -164,7 +165,7 @@
   height: 100%;
   width: 3vh;
   background-color: #99E2D0;
-  animation: bar2 2000ms 300ms backwards infinite ease-in-out alternate;
+  animation: bar2 1000ms 200ms backwards infinite ease-in-out alternate;
 }
 .loader__bars__3 {
   background-color: #15DEA5;
@@ -172,7 +173,7 @@
   height: 100%;
   width: 3vh;
   background-color: #FF79DA;
-  animation: bar3 2000ms 500ms backwards infinite ease-in-out alternate;
+  animation: bar3 1000ms 300ms backwards infinite ease-in-out alternate;
 }
 .loader__bars__4 {
   background-color: #15DEA5;
@@ -180,7 +181,7 @@
   height: 100%;
   width: 3vh;
   background-color: #99E2D0;
-  animation: bar4 2000ms 700ms backwards infinite ease-in-out alternate;
+  animation: bar4 1000ms 400ms backwards infinite ease-in-out alternate;
 }
 .loader__bars__5 {
   background-color: #15DEA5;
@@ -188,7 +189,7 @@
   height: 100%;
   width: 3vh;
   background-color: #FF79DA;
-  animation: bar5 2000ms 900ms backwards infinite ease-in-out alternate;
+  animation: bar5 1000ms 500ms backwards infinite ease-in-out alternate;
 }
 .loader__logo {
   display: flex;
@@ -286,11 +287,11 @@
   }
 }
 @keyframes done {
-  0%, 99% {
-    opacity: 1;
+  0% {
+    visibility: visible;
   }
   100% {
-    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -465,6 +466,8 @@ h2 {
 .menu__plate {
   margin: 20px 0 20px 0;
   flex: 1 0 25%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__plate h2 {
   position: relative;
@@ -574,6 +577,7 @@ h2 {
   margin: 20px;
   flex: 1 0 50%;
   position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .restaurants__gallery__card {

@@ -7,10 +7,10 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(120deg, $colour-tercary, white);
+  background-color: white;
   z-index: 1;
-  animation: done 3000ms 800ms forwards; // durée totale du loader
-
+  transition: visibility 0.75s, opacity 0.75s;
+  animation: done 3500ms forwards;
 
   &__bars {
     margin-top: auto;
@@ -26,7 +26,7 @@
       height: 100%;
       width: 3vh;
       background-color: $colour-secondary;
-      animation: bar1 2000ms 100ms backwards infinite ease-in-out alternate; // durée de l'animation de chaque barre
+      animation: bar1 1000ms 100ms backwards infinite ease-in-out alternate; // durée de l'animation de chaque barre
     }
 
     &__2 {
@@ -36,7 +36,7 @@
       height: 100%;
       width: 3vh;
       background-color: $colour-tercary;
-      animation: bar2 2000ms 300ms backwards infinite ease-in-out alternate;
+      animation: bar2 1000ms 200ms backwards infinite ease-in-out alternate;
     }
 
     &__3 {
@@ -46,7 +46,7 @@
       height: 100%;
       width: 3vh;
       background-color: $colour-secondary;
-      animation: bar3 2000ms 500ms backwards infinite ease-in-out alternate;
+      animation: bar3 1000ms 300ms backwards infinite ease-in-out alternate;
     }
 
     &__4 {
@@ -56,7 +56,7 @@
       height: 100%;
       width: 3vh;
       background-color: $colour-tercary;
-      animation: bar4 2000ms 700ms backwards infinite ease-in-out alternate;
+      animation: bar4 1000ms 400ms backwards infinite ease-in-out alternate;
     }
 
     &__5 {
@@ -67,7 +67,7 @@
       width: 3vh;
       background-color: $colour-secondary;
 
-      animation: bar5 2000ms 900ms backwards infinite ease-in-out alternate;
+      animation: bar5 1000ms 500ms backwards infinite ease-in-out alternate;
     }
   }
 
@@ -185,11 +185,11 @@
 }
 
 @keyframes done {
-  0% , 99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+  0% {
+    visibility: visible;
+}
+  100%{
+    visibility: hidden;
   }
 }
 
