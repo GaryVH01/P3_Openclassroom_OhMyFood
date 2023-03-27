@@ -92,6 +92,12 @@
   transform: rotate(2turn);
 }
 
+.menu__plate__items:active > .menu__plate__items__description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 65%;
+}
+
 .menu__plate__items__slider__checkbox {
   width: 80px;
   height: 80px;
@@ -119,14 +125,10 @@
   .menu__plate__items:hover > .menu__plate__items__slider i {
     transform: rotate(2turn);
   }
-  .reveal--entrance {
-    animation: reveal 1500ms backwards;
-  }
-  .reveal--main-course {
-    animation: reveal 1500ms 500ms backwards;
-  }
-  .reveal--desserts {
-    animation: reveal 1500ms 1000ms backwards;
+  .menu__plate__items:hover > .menu__plate__items__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 65%;
   }
 }
 .loader {
@@ -494,6 +496,7 @@ h2 {
   justify-content: space-between;
   overflow: hidden;
   align-items: center;
+  position: relative;
 }
 .menu__plate__items__description {
   display: flex;
@@ -502,7 +505,6 @@ h2 {
   line-height: 1.5em;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
   justify-content: space-between;
 }
 .menu__plate__items__description h3 {
@@ -523,9 +525,7 @@ h2 {
 .menu__plate__items__slider {
   display: flex;
   margin-right: -80px;
-  flex-wrap: nowrap;
   transition: transform 500ms ease-out;
-  z-index: 0;
 }
 .menu__plate__items__slider__checkbox {
   width: 70px;
