@@ -126,8 +126,6 @@
     transform: rotate(2turn);
   }
   .menu__plate__items:hover > .menu__plate__items__description {
-    overflow: hidden;
-    text-overflow: ellipsis;
     width: 65%;
   }
 }
