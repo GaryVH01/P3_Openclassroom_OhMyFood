@@ -90,12 +90,14 @@
 
 .menu__plate__items:active > .menu__plate__items__slider i {
   transform: rotate(2turn);
+  cursor: pointer;
 }
 
 .menu__plate__items:active > .menu__plate__items__description {
   overflow: hidden;
   text-overflow: ellipsis;
   width: 65%;
+  cursor: pointer;
 }
 
 .menu__plate__items__slider__checkbox {
