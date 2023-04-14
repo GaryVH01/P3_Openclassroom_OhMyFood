@@ -1,13 +1,91 @@
 // animation simple en jouant sur l'opacité des éléments pour les faire apparaître un par un.
-@keyframes reveal{
+@keyframes reveal {
     0% {
         opacity: 0;
     }
-    
+
     100% {
         opacity: 1;
     }
 }
 
 
+@keyframes bar1 {
+    0% {
+        transform: scaleX(0.1) scaleY(0.1);
+        opacity: 0;
+    }
 
+    100% {
+        transform: scaleX(1) scaleY(0.1);
+        opacity: 1;
+    }
+}
+
+@keyframes bar2 {
+    0% {
+        transform: scaleY(0.1);
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: scaleY(0.2);
+        opacity: 1;
+    }
+}
+
+@keyframes bar3 {
+    0% {
+        transform: scaleY(0.1);
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: scaleY(0.4);
+        opacity: 1;
+    }
+}
+
+@keyframes bar4 {
+    0% {
+        transform: scaleY(0.1);
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: scaleY(0.6);
+        opacity: 1;
+    }
+}
+
+@keyframes bar5 {
+    0% {
+        transform: scaleY(0.1);
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes underline {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(150px);
+    }
+}
+
+@keyframes done {
+    0% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}

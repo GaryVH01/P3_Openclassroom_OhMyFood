@@ -6,25 +6,24 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: 80%;
   background-color: white;
   z-index: 1;
-  transition: visibility 0.75s, opacity 0.75s;
   animation: done 3500ms forwards;
 
   &__bars {
     margin-top: auto;
     margin-bottom: auto;
-    width: 30vh;
+    width: 22vh;
     height: 18vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     &__1 {
       background-color: #15DEA5;
       border-radius: 15px;
       height: 100%;
-      width: 3vh;
+      width: 1vh;
       background-color: $colour-secondary;
       animation: bar1 1000ms 100ms backwards infinite ease-in-out alternate; // durée de l'animation de chaque barre
     }
@@ -32,9 +31,8 @@
     &__2 {
       background-color: #15DEA5;
       border-radius: 15px;
-
       height: 100%;
-      width: 3vh;
+      width: 1vh;
       background-color: $colour-tercary;
       animation: bar2 1000ms 200ms backwards infinite ease-in-out alternate;
     }
@@ -42,9 +40,8 @@
     &__3 {
       background-color: #15DEA5;
       border-radius: 15px;
-
       height: 100%;
-      width: 3vh;
+      width: 1vh;
       background-color: $colour-secondary;
       animation: bar3 1000ms 300ms backwards infinite ease-in-out alternate;
     }
@@ -52,9 +49,8 @@
     &__4 {
       background-color: #15DEA5;
       border-radius: 15px;
-
       height: 100%;
-      width: 3vh;
+      width: 1vh;
       background-color: $colour-tercary;
       animation: bar4 1000ms 400ms backwards infinite ease-in-out alternate;
     }
@@ -62,9 +58,8 @@
     &__5 {
       background-color: #15DEA5;
       border-radius: 15px;
-
       height: 100%;
-      width: 3vh;
+      width: 1vh;
       background-color: $colour-secondary;
 
       animation: bar5 1000ms 500ms backwards infinite ease-in-out alternate;
@@ -114,84 +109,7 @@
   }
 }
 
-@keyframes bar1 {
-  0% {
-    transform: scaleX(0.1) scaleY(0.1);
-    opacity: 0;
-  }
 
-  100% {
-    transform: scaleX(1) scaleY(0.1);
-    opacity: 1;
-  }
-}
-
-@keyframes bar2 {
-  0% {
-    transform: scaleY(0.1);
-    opacity: 0.1;
-  }
-
-  100% {
-    transform: scaleY(0.2);
-    opacity: 1;
-  }
-}
-
-@keyframes bar3 {
-  0% {
-    transform: scaleY(0.1);
-    opacity: 0.1;
-  }
-
-  100% {
-    transform: scaleY(0.4);
-    opacity: 1;
-  }
-}
-
-@keyframes bar4 {
-  0% {
-    transform: scaleY(0.1);
-    opacity: 0.1;
-  }
-
-  100% {
-    transform: scaleY(0.6);
-    opacity: 1;
-  }
-}
-
-@keyframes bar5 {
-  0% {
-    transform: scaleY(0.1);
-    opacity: 0.1;
-  }
-
-  100% {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-}
-
-@keyframes underline {
-  0% {
-    transform: translateX(0px);
-  }
-
-  100% {
-    transform: translateX(150px);
-  }
-}
-
-@keyframes done {
-  0% {
-    visibility: visible;
-}
-  100%{
-    visibility: hidden;
-  }
-}
 
 
 
