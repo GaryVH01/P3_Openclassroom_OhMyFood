@@ -181,7 +181,7 @@
   -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-.iconTitle-fill:active {
+.iconTitle-fill:focus {
   opacity: 1;
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
