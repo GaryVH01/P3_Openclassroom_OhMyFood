@@ -6,15 +6,16 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 80%;
+  width: 100%;
   background-color: white;
   z-index: 1;
   animation: done 3500ms forwards;
+  gap: 5px;
 
   &__bars {
     margin-top: auto;
     margin-bottom: auto;
-    width: 22vh;
+    width: 30vh;
     height: 18vh;
     display: flex;
     justify-content: space-between;
@@ -23,7 +24,7 @@
       background-color: #15DEA5;
       border-radius: 15px;
       height: 100%;
-      width: 1vh;
+      width: 3vh;
       background-color: $colour-secondary;
       animation: bar1 1000ms 100ms backwards infinite ease-in-out alternate; // durée de l'animation de chaque barre
     }
@@ -32,7 +33,7 @@
       background-color: #15DEA5;
       border-radius: 15px;
       height: 100%;
-      width: 1vh;
+      width: 3vh;
       background-color: $colour-tercary;
       animation: bar2 1000ms 200ms backwards infinite ease-in-out alternate;
     }
@@ -41,7 +42,7 @@
       background-color: #15DEA5;
       border-radius: 15px;
       height: 100%;
-      width: 1vh;
+      width: 3vh;
       background-color: $colour-secondary;
       animation: bar3 1000ms 300ms backwards infinite ease-in-out alternate;
     }
@@ -50,7 +51,7 @@
       background-color: #15DEA5;
       border-radius: 15px;
       height: 100%;
-      width: 1vh;
+      width: 3vh;
       background-color: $colour-tercary;
       animation: bar4 1000ms 400ms backwards infinite ease-in-out alternate;
     }
@@ -59,7 +60,7 @@
       background-color: #15DEA5;
       border-radius: 15px;
       height: 100%;
-      width: 1vh;
+      width: 3vh;
       background-color: $colour-secondary;
 
       animation: bar5 1000ms 500ms backwards infinite ease-in-out alternate;

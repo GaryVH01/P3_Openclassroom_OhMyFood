@@ -1,9 +1,76 @@
+ /* Couleurs du site*/
 @keyframes reveal {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes bar1 {
+  0% {
+    transform: scaleX(0.1) scaleY(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1) scaleY(0.1);
+    opacity: 1;
+  }
+}
+@keyframes bar2 {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scaleY(0.2);
+    opacity: 1;
+  }
+}
+@keyframes bar3 {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scaleY(0.4);
+    opacity: 1;
+  }
+}
+@keyframes bar4 {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scaleY(0.6);
+    opacity: 1;
+  }
+}
+@keyframes bar5 {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes underline {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(150px);
+  }
+}
+@keyframes done {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 .iconTitle-fill {
@@ -83,16 +150,16 @@
   animation: reveal 2000ms 1900ms backwards;
 }
 
-.menu__plate__items:active > .menu__plate__items__slider {
+.menu__plate__items:focus > .menu__plate__items__slider {
   transform: translateX(-80px);
 }
 
-.menu__plate__items:active > .menu__plate__items__slider i {
+.menu__plate__items:focus > .menu__plate__items__slider i {
   transform: rotate(2turn);
   cursor: pointer;
 }
 
-.menu__plate__items:active > .menu__plate__items__description {
+.menu__plate__items:focus > .menu__plate__items__description {
   overflow: hidden;
   text-overflow: ellipsis;
   width: 65%;
@@ -120,13 +187,13 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1400px) {
-  .menu__plate__items:hover > .menu__plate__items__slider {
+  .menu__plate__items:focus > .menu__plate__items__slider {
     transform: translateX(-80px);
   }
-  .menu__plate__items:hover > .menu__plate__items__slider i {
+  .menu__plate__items:focus > .menu__plate__items__slider i {
     transform: rotate(2turn);
   }
-  .menu__plate__items:hover > .menu__plate__items__description {
+  .menu__plate__items:focus > .menu__plate__items__description {
     width: 65%;
   }
 }
@@ -141,8 +208,8 @@
   width: 100%;
   background-color: white;
   z-index: 1;
-  transition: visibility 0.75s, opacity 0.75s;
   animation: done 3500ms forwards;
+  gap: 5px;
 }
 .loader__bars {
   margin-top: auto;
@@ -150,7 +217,7 @@
   width: 30vh;
   height: 18vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .loader__bars__1 {
   background-color: #15DEA5;
@@ -229,72 +296,6 @@
   animation: underline 2000ms backwards infinite alternate;
 }
 
-@keyframes bar1 {
-  0% {
-    transform: scaleX(0.1) scaleY(0.1);
-    opacity: 0;
-  }
-  100% {
-    transform: scaleX(1) scaleY(0.1);
-    opacity: 1;
-  }
-}
-@keyframes bar2 {
-  0% {
-    transform: scaleY(0.1);
-    opacity: 0.1;
-  }
-  100% {
-    transform: scaleY(0.2);
-    opacity: 1;
-  }
-}
-@keyframes bar3 {
-  0% {
-    transform: scaleY(0.1);
-    opacity: 0.1;
-  }
-  100% {
-    transform: scaleY(0.4);
-    opacity: 1;
-  }
-}
-@keyframes bar4 {
-  0% {
-    transform: scaleY(0.1);
-    opacity: 0.1;
-  }
-  100% {
-    transform: scaleY(0.6);
-    opacity: 1;
-  }
-}
-@keyframes bar5 {
-  0% {
-    transform: scaleY(0.1);
-    opacity: 0.1;
-  }
-  100% {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-}
-@keyframes underline {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(150px);
-  }
-}
-@keyframes done {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
 
 * {
   text-decoration: none;
@@ -312,6 +313,11 @@ body {
 
 a {
   color: black;
+}
+
+input::placeholder {
+  color: black;
+  opacity: 1;
 }
 
 h1, h4 {
